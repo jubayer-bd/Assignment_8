@@ -86,7 +86,7 @@ const Navbar = () => {
         </div>
 
         {/* Logo */}
-        <NavLink to={"/"}>
+        <NavLink to={"/"} onClick={() => handleToggle("Home")}>
           <div className="flex justify-center items-center gap-2">
             <img className="w-10" src="/logo.png" alt="Logo" />
             <span className="text-3xl font-bold bg-gradient-to-bl from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent">
