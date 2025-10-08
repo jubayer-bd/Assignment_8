@@ -4,12 +4,13 @@ import Home from "../Pages/Home";
 import Apps from "../Pages/Apps";
 import Install from "../Pages/Install";
 import AppDetails from "../Pages/AppDetails";
+import ErrorPage from "../Pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-    errorElement: <p> 404 | Error </p>,
+    errorElement: <ErrorPage/>,
     children: [
       {
         index: true,

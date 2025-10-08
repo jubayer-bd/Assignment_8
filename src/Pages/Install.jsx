@@ -34,7 +34,9 @@ const InstalledApps = () => {
 
   const installedAppData = useMemo(() => {
     // filter installed apps
-    const filtered = data.filter((app) => installedApps.includes(String(app.id)));
+    const filtered = data.filter((app) =>
+      installedApps.includes(String(app.id))
+    );
 
     // sort without mutating original
     const sorted = [...filtered];
@@ -48,19 +50,26 @@ const InstalledApps = () => {
   }, [data, installedApps, order]);
 
   if (loading) return <p className="text-center py-10">Loading...</p>;
-  if (error) return <p className="text-center py-10 text-red-500">Something went wrong!</p>;
+  if (error)
+    return (
+      <p className="text-center py-10 text-red-500">Something went wrong!</p>
+    );
 
   return (
     <div className="max-w-11/12 mx-auto py-10 px-4">
       <div>
-        <h1 className="text-3xl text-center font-bold mb-2">Your Installed Apps</h1>
+        <h1 className="text-3xl text-center font-bold mb-2">
+          Your Installed Apps
+        </h1>
         <p className="text-[#627382] text-center text-sm mb-4">
           Explore All Trending Apps on the Market developed by us
         </p>
       </div>
 
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-gray-700 font-semibold">{installedAppData.length} Apps Found</h2>
+        <h2 className="text-gray-700 font-semibold">
+          {installedAppData.length} Apps Found
+        </h2>
         <label className="form-control w-full max-w-xs">
           <select
             className="select select-bordered"
@@ -75,21 +84,23 @@ const InstalledApps = () => {
       </div>
 
       {installedAppData.length === 0 ? (
-        <p className="text-center py-10 text-gray-600">No apps installed yet.</p>
+        <p className="text-center py-10 text-gray-600">
+          No apps installed yet.
+        </p>
       ) : (
         <div className="flex flex-col items-center py-10 gap-6">
           {installedAppData.map((app) => (
             <div
               key={app.id}
-              className="border flex-row gap-8 rounded-lg p-4 shadow-md flex items-center w-full"
+              className="border flex-row gap-8 rounded-lg p-2 justify-start shadow-md flex items-center w-full"
             >
               <img
                 src={app.image}
                 alt={app.title}
                 className="w-20 h-20 object-cover rounded-lg mb-4"
               />
-              <div className="flex justify-between w-full">
-                <div>
+              <div className="flex   justify-between  ">
+                <div className="">
                   <h2 className="text-xl font-semibold">{app.title}</h2>
                   <p className="text-gray-600 mb-2">{app.companyName}</p>
                   <div className="flex gap-4 mb-2">
@@ -106,11 +117,12 @@ const InstalledApps = () => {
                       {app.size} <span>MB</span>
                     </p>
                   </div>
+                  <div></div>
                 </div>
-                <div className="flex gap-2">
+                <div className="flex  items-center justify-between  ">
                   <button
                     onClick={() => handleUninstall(app.id)}
-                    className="bg-red-500 text-white py-2 mt-5 px-3 rounded hover:bg-red-600"
+                    className="bg-[#00D390] text-white  mt-5 px-3 rounded hover:bg-red-600"
                   >
                     Uninstall
                   </button>

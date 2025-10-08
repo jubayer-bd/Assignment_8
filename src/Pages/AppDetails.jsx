@@ -9,6 +9,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import { toast, ToastContainer } from "react-toastify";
 
 const AppDetails = () => {
   const { id } = useParams();
@@ -29,6 +30,7 @@ const AppDetails = () => {
     if (!installedApps.includes(id)) {
       installedApps.push(id);
       localStorage.setItem("install", JSON.stringify(installedApps));
+      toast.success(`${title} Installed`)
       setInstalled(true);
     }
   };
@@ -159,6 +161,16 @@ const AppDetails = () => {
         <h1 className="font-bold text-2xl mb-2">Description</h1>
         <p>{description}</p>
       </section>
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        pauseOnHover
+        draggable
+        theme="colored"
+      />
     </div>
   );
 };
