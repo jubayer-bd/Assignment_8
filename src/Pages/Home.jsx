@@ -96,7 +96,7 @@ const Home = () => {
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-11/12 max-w-7xl mx-auto py-10">
-          {homeApps.map((item) => (
+          {data.map((item) => (
             <ProductCard key={item.id} singleData={item} />
           ))}
         </div>

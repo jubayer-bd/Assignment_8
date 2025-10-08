@@ -4,9 +4,9 @@ const ProductCard = ({ singleData }) => {
   const { title, companyName, image, size, ratingAvg } = singleData;
 
   return (
-    <div className="bg-white shadow-md  overflow-hidden transition-transform duration-300 hover:scale-102 w-full sm:w-60 md:w-64 mx-auto">
-      <figure className=" p-2  w-full overflow-hidden">
-        <img src={image} alt={title} className="object-cover h-fit w-full " />
+    <div className="bg-white shadow-md  overflow-hidden transition-transform duration-300 hover:scale-102 w-full sm:w-60 md:w-64 mx-auto  flex flex-col">
+      <figure className=" p-4  w-full overflow-hidden flex-1  justify-center items-center ">
+        <img src={image} alt={title} className="object-cover h-fit w-full" />
       </figure>
 
       <div className="p-4 space-y-2">

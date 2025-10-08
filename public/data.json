@@ -1,362 +1,362 @@
 [
   {
-    "image": "https://i.ibb.co.com/XxYgs4xY/unnamed-png-1.png",
-    "title": "ChatMate",
-    "companyName": "NextGen AI Labs",
     "id": 1,
-    "description": "An AI-powered chat assistant that helps you with everyday tasks and smart conversations.",
-    "size": 85,
-    "reviews": 25000,
-    "ratingAvg": 4.6,
-    "downloads": 1200000,
+    "image": "https://i.ibb.co.com/5XTg3hfF/34287f4927e862d5d86b63d63df3409f.jpg",
+    "title": "PUBG Mobile",
+    "companyName": "Tencent Games",
+    "description": "Battle Royale game with realistic graphics and intense multiplayer matches.",
+    "size": 2300,
+    "reviews": 98000000,
+    "ratingAvg": 4.3,
+    "downloads": 1000000000,
     "ratings": [
-      { "name": "1 star", "count": 1200 },
-      { "name": "2 star", "count": 900 },
-      { "name": "3 star", "count": 2500 },
-      { "name": "4 star", "count": 6000 },
-      { "name": "5 star", "count": 14300 }
+      { "name": "1 star", "count": 1200000 },
+      { "name": "2 star", "count": 800000 },
+      { "name": "3 star", "count": 4000000 },
+      { "name": "4 star", "count": 20000000 },
+      { "name": "5 star", "count": 72000000 }
     ]
   },
   {
-    "image": "https://i.ibb.co.com/HjRwj31/2.webp",
-    "title": "PhotoTune",
-    "companyName": "PixelCraft Studio",
     "id": 2,
-    "description": "Enhance your photos instantly with AI filters, color correction, and one-tap retouch tools.",
-    "size": 72,
-    "reviews": 15000,
-    "ratingAvg": 4.4,
-    "downloads": 850000,
+    "image": "https://i.ibb.co.com/Lzv2B6jC/Ozmaqzz-v-Alsyv-GO-Sv6-MYh-ZGzh-u-Wq-Xc-Ng3-GXV6-Qsvlz-s-EAy-O6-RATTWhgvc-GO7jgu1c-QV7-H5-RWVsg-Zvbq.png",
+    "title": "Free Fire",
+    "companyName": "Garena",
+    "description": "Fast-paced battle royale experience optimized for all devices.",
+    "size": 700,
+    "reviews": 72000000,
+    "ratingAvg": 4.2,
+    "downloads": 1000000000,
     "ratings": [
-      { "name": "1 star", "count": 800 },
-      { "name": "2 star", "count": 600 },
-      { "name": "3 star", "count": 2000 },
-      { "name": "4 star", "count": 5000 },
-      { "name": "5 star", "count": 7600 }
+      { "name": "1 star", "count": 900000 },
+      { "name": "2 star", "count": 500000 },
+      { "name": "3 star", "count": 3100000 },
+      { "name": "4 star", "count": 16000000 },
+      { "name": "5 star", "count": 52000000 }
     ]
   },
   {
-    "image": "https://i.ibb.co.com/JwRXtQVM/3.jpg",
-    "title": "FitTrack",
-    "companyName": "Healthify Co.",
     "id": 3,
-    "description": "Track workouts, measure calories, and stay motivated with custom fitness plans.",
-    "size": 95,
-    "reviews": 34000,
-    "ratingAvg": 4.8,
-    "downloads": 2200000,
-    "ratings": [
-      { "name": "1 star", "count": 900 },
-      { "name": "2 star", "count": 1100 },
-      { "name": "3 star", "count": 2800 },
-      { "name": "4 star", "count": 8000 },
-      { "name": "5 star", "count": 21200 }
-    ]
-  },
-  {
-    "image": "https://i.ibb.co.com/BV8xg90C/4.webp",
-    "title": "NoteSync",
-    "companyName": "CloudEdge Apps",
-    "id": 4,
-    "description": "Sync notes seamlessly across all your devices with end-to-end encryption.",
-    "size": 60,
-    "reviews": 8000,
-    "ratingAvg": 4.2,
-    "downloads": 420000,
-    "ratings": [
-      { "name": "1 star", "count": 300 },
-      { "name": "2 star", "count": 500 },
-      { "name": "3 star", "count": 1000 },
-      { "name": "4 star", "count": 2400 },
-      { "name": "5 star", "count": 3800 }
-    ]
-  },
-  {
-    "image": "https://picsum.photos/200?5",
-    "title": "SoundWave",
-    "companyName": "Harmony Media",
-    "id": 5,
-    "description": "Stream and download your favorite songs and podcasts ad-free.",
-    "size": 110,
-    "reviews": 54000,
-    "ratingAvg": 4.7,
-    "downloads": 3400000,
-    "ratings": [
-      { "name": "1 star", "count": 2500 },
-      { "name": "2 star", "count": 2000 },
-      { "name": "3 star", "count": 6000 },
-      { "name": "4 star", "count": 13000 },
-      { "name": "5 star", "count": 30500 }
-    ]
-  },
-  {
-    "image": "https://picsum.photos/200?6",
-    "title": "BudgetEase",
-    "companyName": "FinTech Vision",
-    "id": 6,
-    "description": "Manage your expenses and savings easily with smart charts and spending alerts.",
-    "size": 68,
-    "reviews": 20000,
-    "ratingAvg": 4.5,
-    "downloads": 980000,
-    "ratings": [
-      { "name": "1 star", "count": 1000 },
-      { "name": "2 star", "count": 1100 },
-      { "name": "3 star", "count": 2200 },
-      { "name": "4 star", "count": 7000 },
-      { "name": "5 star", "count": 8700 }
-    ]
-  },
-  {
-    "image": "https://picsum.photos/200?7",
-    "title": "Travelio",
-    "companyName": "GoGlobal Inc.",
-    "id": 7,
-    "description": "Find cheap flights, book hotels, and explore destinations with AI recommendations.",
-    "size": 120,
-    "reviews": 47000,
-    "ratingAvg": 4.6,
-    "downloads": 3100000,
-    "ratings": [
-      { "name": "1 star", "count": 1900 },
-      { "name": "2 star", "count": 1300 },
-      { "name": "3 star", "count": 5000 },
-      { "name": "4 star", "count": 12000 },
-      { "name": "5 star", "count": 26800 }
-    ]
-  },
-  {
-    "image": "https://picsum.photos/200?8",
-    "title": "MindFlow",
-    "companyName": "ZenLabs",
-    "id": 8,
-    "description": "Guided meditations and mood tracking for mindfulness and better sleep.",
-    "size": 78,
-    "reviews": 9000,
-    "ratingAvg": 4.3,
-    "downloads": 550000,
-    "ratings": [
-      { "name": "1 star", "count": 400 },
-      { "name": "2 star", "count": 600 },
-      { "name": "3 star", "count": 1300 },
-      { "name": "4 star", "count": 3000 },
-      { "name": "5 star", "count": 4700 }
-    ]
-  },
-  {
-    "image": "https://picsum.photos/200?9",
-    "title": "ShopSmart",
-    "companyName": "Ecom Solutions",
-    "id": 9,
-    "description": "Compare product prices, get deals, and track orders in one smart shopping app.",
-    "size": 88,
-    "reviews": 15000,
+    "image": "https://i.ibb.co.com/ZpCXzL4D/apps-37935-9007199266245907-b029bd80-381a-4869-854f-bac6f359c5c9.png",
+    "title": "Facebook",
+    "companyName": "Meta Platforms, Inc.",
+    "description": "Connect with friends, share updates, and join communities globally.",
+    "size": 200,
+    "reviews": 140000000,
     "ratingAvg": 4.1,
-    "downloads": 760000,
+    "downloads": 5000000000,
     "ratings": [
-      { "name": "1 star", "count": 700 },
-      { "name": "2 star", "count": 900 },
-      { "name": "3 star", "count": 2500 },
-      { "name": "4 star", "count": 4000 },
-      { "name": "5 star", "count": 6900 }
+      { "name": "1 star", "count": 6000000 },
+      { "name": "2 star", "count": 3000000 },
+      { "name": "3 star", "count": 12000000 },
+      { "name": "4 star", "count": 28000000 },
+      { "name": "5 star", "count": 90000000 }
     ]
   },
   {
-    "image": "https://picsum.photos/200?10",
-    "title": "CookBook Pro",
-    "companyName": "TasteTech",
-    "id": 10,
-    "description": "Discover recipes, plan meals, and get nutrition facts in one smart cooking app.",
-    "size": 92,
-    "reviews": 12000,
+    "id": 4,
+    "image": "https://i.ibb.co.com/cScxP8r3/images.jpg",
+    "title": "Instagram",
+    "companyName": "Meta Platforms, Inc.",
+    "description": "Share your photos, stories, and reels with the world.",
+    "size": 180,
+    "reviews": 100000000,
     "ratingAvg": 4.5,
-    "downloads": 640000,
+    "downloads": 5000000000,
     "ratings": [
-      { "name": "1 star", "count": 400 },
-      { "name": "2 star", "count": 800 },
-      { "name": "3 star", "count": 1700 },
-      { "name": "4 star", "count": 3600 },
-      { "name": "5 star", "count": 5500 }
+      { "name": "1 star", "count": 4000000 },
+      { "name": "2 star", "count": 2000000 },
+      { "name": "3 star", "count": 7000000 },
+      { "name": "4 star", "count": 25000000 },
+      { "name": "5 star", "count": 62000000 }
     ]
   },
   {
-    "image": "https://picsum.photos/200?11",
-    "title": "TaskPro",
-    "companyName": "Productify Labs",
-    "id": 11,
-    "description": "Organize your daily to-do lists and projects with calendar integration.",
-    "size": 55,
-    "reviews": 11000,
-    "ratingAvg": 4.2,
-    "downloads": 480000,
-    "ratings": [
-      { "name": "1 star", "count": 500 },
-      { "name": "2 star", "count": 600 },
-      { "name": "3 star", "count": 1400 },
-      { "name": "4 star", "count": 3000 },
-      { "name": "5 star", "count": 4500 }
-    ]
-  },
-  {
-    "image": "https://picsum.photos/200?12",
-    "title": "WeatherGo",
-    "companyName": "SkyMap Technologies",
-    "id": 12,
-    "description": "Accurate real-time weather forecasts with radar maps and air quality index.",
-    "size": 70,
-    "reviews": 22000,
-    "ratingAvg": 4.6,
-    "downloads": 1300000,
-    "ratings": [
-      { "name": "1 star", "count": 800 },
-      { "name": "2 star", "count": 900 },
-      { "name": "3 star", "count": 2000 },
-      { "name": "4 star", "count": 7000 },
-      { "name": "5 star", "count": 11300 }
-    ]
-  },
-  {
-    "image": "https://picsum.photos/200?13",
-    "title": "EduPath",
-    "companyName": "Learnify Co.",
-    "id": 13,
-    "description": "Online learning platform with interactive courses and skill certifications.",
-    "size": 100,
-    "reviews": 30000,
-    "ratingAvg": 4.8,
-    "downloads": 2400000,
-    "ratings": [
-      { "name": "1 star", "count": 1000 },
-      { "name": "2 star", "count": 800 },
-      { "name": "3 star", "count": 2500 },
-      { "name": "4 star", "count": 6000 },
-      { "name": "5 star", "count": 19700 }
-    ]
-  },
-  {
-    "image": "https://picsum.photos/200?14",
-    "title": "CryptoVault",
-    "companyName": "ChainSecure",
-    "id": 14,
-    "description": "Monitor, buy, and store cryptocurrency safely with real-time market alerts.",
-    "size": 105,
-    "reviews": 18000,
-    "ratingAvg": 4.3,
-    "downloads": 950000,
-    "ratings": [
-      { "name": "1 star", "count": 900 },
-      { "name": "2 star", "count": 800 },
-      { "name": "3 star", "count": 1800 },
-      { "name": "4 star", "count": 4000 },
-      { "name": "5 star", "count": 10500 }
-    ]
-  },
-  {
-    "image": "https://picsum.photos/200?15",
-    "title": "GameBox",
-    "companyName": "PixelPlay Studio",
-    "id": 15,
-    "description": "Access hundreds of mini-games in one app with cloud saves and achievements.",
-    "size": 130,
-    "reviews": 40000,
-    "ratingAvg": 4.5,
-    "downloads": 3700000,
-    "ratings": [
-      { "name": "1 star", "count": 2200 },
-      { "name": "2 star", "count": 1900 },
-      { "name": "3 star", "count": 6000 },
-      { "name": "4 star", "count": 12000 },
-      { "name": "5 star", "count": 17900 }
-    ]
-  },
-  {
-    "image": "https://picsum.photos/200?16",
-    "title": "QuickDocs",
-    "companyName": "OfficeLab",
-    "id": 16,
-    "description": "Create, edit, and share documents, spreadsheets, and slides from anywhere.",
-    "size": 90,
-    "reviews": 25000,
-    "ratingAvg": 4.6,
-    "downloads": 1900000,
-    "ratings": [
-      { "name": "1 star", "count": 900 },
-      { "name": "2 star", "count": 800 },
-      { "name": "3 star", "count": 2200 },
-      { "name": "4 star", "count": 7000 },
-      { "name": "5 star", "count": 14100 }
-    ]
-  },
-  {
-    "image": "https://picsum.photos/200?17",
-    "title": "Watchify",
-    "companyName": "StreamNet Media",
-    "id": 17,
-    "description": "Watch movies, shows, and live TV with personalized recommendations.",
+    "id": 5,
+    "image": "https://i.ibb.co.com/67Z74M0W/256.png",
+    "title": "YouTube",
+    "companyName": "Google LLC",
+    "description": "Watch, upload, and share videos from creators worldwide.",
     "size": 150,
-    "reviews": 67000,
-    "ratingAvg": 4.7,
-    "downloads": 5800000,
+    "reviews": 150000000,
+    "ratingAvg": 4.6,
+    "downloads": 10000000000,
     "ratings": [
-      { "name": "1 star", "count": 3000 },
-      { "name": "2 star", "count": 2000 },
-      { "name": "3 star", "count": 7000 },
-      { "name": "4 star", "count": 15000 },
-      { "name": "5 star", "count": 40000 }
+      { "name": "1 star", "count": 3000000 },
+      { "name": "2 star", "count": 1500000 },
+      { "name": "3 star", "count": 5000000 },
+      { "name": "4 star", "count": 20000000 },
+      { "name": "5 star", "count": 120000000 }
     ]
   },
   {
-    "image": "https://picsum.photos/200?18",
-    "title": "LangLearn",
-    "companyName": "Polyglot Labs",
-    "id": 18,
-    "description": "Learn new languages through fun exercises, speech recognition, and games.",
-    "size": 80,
-    "reviews": 28000,
-    "ratingAvg": 4.8,
-    "downloads": 2100000,
-    "ratings": [
-      { "name": "1 star", "count": 700 },
-      { "name": "2 star", "count": 900 },
-      { "name": "3 star", "count": 2500 },
-      { "name": "4 star", "count": 6200 },
-      { "name": "5 star", "count": 17700 }
-    ]
-  },
-  {
-    "image": "https://picsum.photos/200?19",
-    "title": "SafeNet VPN",
-    "companyName": "CyberEdge",
-    "id": 19,
-    "description": "Browse privately and securely with high-speed encrypted VPN servers worldwide.",
-    "size": 65,
-    "reviews": 23000,
+    "id": 6,
+    "image": "https://i.ibb.co.com/cjdRmR2/0a40ef315ef69e102893f2a0b77abf67.png",
+    "title": "TikTok",
+    "companyName": "ByteDance Ltd.",
+    "description": "Create and watch short-form videos that entertain and inspire.",
+    "size": 350,
+    "reviews": 90000000,
     "ratingAvg": 4.4,
-    "downloads": 1500000,
+    "downloads": 3000000000,
     "ratings": [
-      { "name": "1 star", "count": 1000 },
-      { "name": "2 star", "count": 1300 },
-      { "name": "3 star", "count": 2500 },
-      { "name": "4 star", "count": 6000 },
-      { "name": "5 star", "count": 12200 }
+      { "name": "1 star", "count": 4000000 },
+      { "name": "2 star", "count": 2000000 },
+      { "name": "3 star", "count": 8000000 },
+      { "name": "4 star", "count": 21000000 },
+      { "name": "5 star", "count": 55000000 }
     ]
   },
   {
-    "image": "https://i.ibb.co.com/JFBWR9c8/clean-master-icon-avif-20.jpg",
-    "title": "CleanMaster",
-    "companyName": "SpeedBoost Tech",
-    "id": 20,
-    "description": "Optimize device performance by cleaning junk files and freeing memory.",
-    "size": 50,
-    "reviews": 35000,
+    "id": 7,
+    "image": "https://i.ibb.co.com/CpMfkStP/i-Dg-Vzn-Phzb5r-XDn-NVDC0wwl-Tc-t5p-Dcmc-Pzi-Jk-Ljk8wy-Sw-Pq-Ne-I5-N8w-VRPHQNRNyd-Q.png",
+    "title": "Pathao",
+    "companyName": "Pathao Ltd.",
+    "description": "Bangladesh's super app for rides, food delivery, and courier services.",
+    "size": 120,
+    "reviews": 2000000,
     "ratingAvg": 4.3,
-    "downloads": 2900000,
+    "downloads": 10000000,
     "ratings": [
-      { "name": "1 star", "count": 2000 },
-      { "name": "2 star", "count": 1500 },
-      { "name": "3 star", "count": 4000 },
-      { "name": "4 star", "count": 9000 },
-      { "name": "5 star", "count": 18500 }
+      { "name": "1 star", "count": 30000 },
+      { "name": "2 star", "count": 15000 },
+      { "name": "3 star", "count": 120000 },
+      { "name": "4 star", "count": 400000 },
+      { "name": "5 star", "count": 1400000 }
+    ]
+  },
+  {
+    "id": 8,
+    "image": "https://i.ibb.co.com/Mxy8zqbh/TS1-Wq-Ju0eq-Q5-Rk-Gw5-Tk-VEJ7fx-PLy-Kg-Du0-UHc7-E9-Av5dnt-Mv-B3u-VWFm7-bu0jk-FFla20.jpg",
+    "title": "10 Minute School",
+    "companyName": "Robi Axiata Ltd.",
+    "description": "Bangladesh’s leading online education platform for students and professionals.",
+    "size": 95,
+    "reviews": 1500000,
+    "ratingAvg": 4.8,
+    "downloads": 5000000,
+    "ratings": [
+      { "name": "1 star", "count": 5000 },
+      { "name": "2 star", "count": 4000 },
+      { "name": "3 star", "count": 20000 },
+      { "name": "4 star", "count": 300000 },
+      { "name": "5 star", "count": 1170000 }
+    ]
+  },
+  {
+    "id": 9,
+    "image": "https://i.ibb.co.com/fddjsYB6/Ma-HEb-K1-Lz-Eoay-R0t-E0-ZXq-Lopug69-d-Pspf-CV36zz-HOSu-C0-i6mu5ul-Kz1e-Y7en-UM4.png",
+    "title": "Photomath",
+    "companyName": "Photomath, Inc.",
+    "description": "Scan and solve math problems instantly with step-by-step solutions.",
+    "size": 60,
+    "reviews": 12000000,
+    "ratingAvg": 4.7,
+    "downloads": 100000000,
+    "ratings": [
+      { "name": "1 star", "count": 300000 },
+      { "name": "2 star", "count": 100000 },
+      { "name": "3 star", "count": 600000 },
+      { "name": "4 star", "count": 2500000 },
+      { "name": "5 star", "count": 8500000 }
+    ]
+  },
+  {
+    "id": 10,
+    "image": "https://i.ibb.co.com/jj5SMTT/tw-co-GKgk1-K-z-O-Ypf9z-BKV1s-KT3d-YN1-MIUx-Iqtnbfm-ON5x-Ymuo-Ar31g-E4o-Sf-JHNt-A-a-St-Td-qe9-R8-S6.png",
+    "title": "Duolingo",
+    "companyName": "Duolingo, Inc.",
+    "description": "Learn languages for free through fun, bite-sized lessons.",
+    "size": 90,
+    "reviews": 14000000,
+    "ratingAvg": 4.7,
+    "downloads": 500000000,
+    "ratings": [
+      { "name": "1 star", "count": 300000 },
+      { "name": "2 star", "count": 200000 },
+      { "name": "3 star", "count": 1000000 },
+      { "name": "4 star", "count": 3000000 },
+      { "name": "5 star", "count": 9500000 }
+    ]
+  },
+  {
+    "id": 11,
+    "image": "https://i.ibb.co.com/Z1t55q38/k-Mof-EFLjob-Zy-b-Cuai-Dogz-Bc-UT-dz3-BBb-Or-IEj-J-hq-Oabj-K8ieuev-Ge6wl-TD15-Qz-Oqw-w480-h960-rw.webp",
+    "title": "LinkedIn",
+    "companyName": "Microsoft Corporation",
+    "description": "Network professionally and discover job opportunities.",
+    "size": 140,
+    "reviews": 8500000,
+    "ratingAvg": 4.2,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 400000 },
+      { "name": "2 star", "count": 300000 },
+      { "name": "3 star", "count": 1000000 },
+      { "name": "4 star", "count": 2200000 },
+      { "name": "5 star", "count": 4600000 }
+    ]
+  },
+  {
+    "id": 12,
+    "image": "https://i.ibb.co.com/q37P8LXq/A-Rnrh0-J7i-Km-ABsk-Tonq-FAANRLGTGUg-nu-E4-PEMYw-Jav-L3n-Pt5u-Ws-U2-WO-DSg-V-m-OOM.png",
+    "title": "X (Twitter)",
+    "companyName": "X Corp.",
+    "description": "Share your thoughts, follow topics, and connect with communities.",
+    "size": 170,
+    "reviews": 90000000,
+    "ratingAvg": 4.0,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 8000000 },
+      { "name": "2 star", "count": 4000000 },
+      { "name": "3 star", "count": 10000000 },
+      { "name": "4 star", "count": 18000000 },
+      { "name": "5 star", "count": 50000000 }
+    ]
+  },
+  {
+    "id": 13,
+    "image": "https://i.ibb.co.com/j96wgCyz/Kxe-SAj-PTKli-CErbiv-Ni-Xrd6c-Twfbq-UJcb-SRPe-IBVK-Ymwckf-MRS1-VIHz-5cg-T09y-Mo.png",
+    "title": "Snapchat",
+    "companyName": "Snap Inc.",
+    "description": "Share moments instantly and chat with friends creatively.",
+    "size": 160,
+    "reviews": 70000000,
+    "ratingAvg": 4.2,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 3000000 },
+      { "name": "2 star", "count": 2000000 },
+      { "name": "3 star", "count": 6000000 },
+      { "name": "4 star", "count": 17000000 },
+      { "name": "5 star", "count": 42000000 }
+    ]
+  },
+  {
+    "id": 14,
+    "image": "https://i.ibb.co.com/ksrY8WDD/GBa-Wlaevq4-CA0x-N13-QYl-Ise-Em-L2inz-VEx9z3-HBBJPNb-IQml-ZLg-A9lj-pfb-Y4h3-XVa5-Xvuns3-ORa-WSEvk8-I.jpg",
+    "title": "Call of Duty: Mobile",
+    "companyName": "Activision Publishing",
+    "description": "Multiplayer FPS game featuring iconic maps and modes.",
+    "size": 2200,
+    "reviews": 64000000,
+    "ratingAvg": 4.5,
+    "downloads": 500000000,
+    "ratings": [
+      { "name": "1 star", "count": 1200000 },
+      { "name": "2 star", "count": 800000 },
+      { "name": "3 star", "count": 3000000 },
+      { "name": "4 star", "count": 16000000 },
+      { "name": "5 star", "count": 42000000 }
+    ]
+  },
+  {
+    "id": 15,
+    "image": "https://i.ibb.co.com/vxZRNtqZ/1-CRc-Ufmtwv-Wx-T2g-x-JF8s9-btha42-TLi6-Lo-q-Vk-Vom-XBb-citzak-ZX9-Bbe-Y51ihol-Ws.png",
+    "title": "bKash",
+    "companyName": "bKash Limited",
+    "description": "Bangladesh's most trusted mobile financial service app.",
+    "size": 80,
+    "reviews": 2500000,
+    "ratingAvg": 4.6,
+    "downloads": 20000000,
+    "ratings": [
+      { "name": "1 star", "count": 30000 },
+      { "name": "2 star", "count": 20000 },
+      { "name": "3 star", "count": 150000 },
+      { "name": "4 star", "count": 400000 },
+      { "name": "5 star", "count": 1900000 }
+    ]
+  },
+  {
+    "id": 16,
+    "image": "https://i.ibb.co.com/JRnCtTQG/9ps-d6n-GKQzfbs-Jf-Ma-FR0-Rkdwz-Edb-ZV53-Re-YCS09-Eo5-MV-Gt-Vyl-FD-7-IHc-Vktlnz9-Mo.jpg",
+    "title": "Nagad",
+    "companyName": "Bangladesh Post Office",
+    "description": "Digital financial service for secure money transfers in Bangladesh.",
+    "size": 70,
+    "reviews": 2000000,
+    "ratingAvg": 4.5,
+    "downloads": 10000000,
+    "ratings": [
+      { "name": "1 star", "count": 20000 },
+      { "name": "2 star", "count": 15000 },
+      { "name": "3 star", "count": 100000 },
+      { "name": "4 star", "count": 350000 },
+      { "name": "5 star", "count": 1500000 }
+    ]
+  },
+  {
+    "id": 17,
+    "image": "https://i.ibb.co.com/8LWrf0Wf/b-Ytqb-Oc-TYOlgc6gq-Z2rwb8lpt-Huwl-NE75z-YJu6-Bn076-h-Tmvd96-HH-6v7-S0-YUAAJXo-JN.png",
+    "title": "WhatsApp Messenger",
+    "companyName": "Meta Platforms, Inc.",
+    "description": "Fast, secure, and free messaging and calls across the world.",
+    "size": 120,
+    "reviews": 160000000,
+    "ratingAvg": 4.6,
+    "downloads": 5000000000,
+    "ratings": [
+      { "name": "1 star", "count": 4000000 },
+      { "name": "2 star", "count": 2000000 },
+      { "name": "3 star", "count": 6000000 },
+      { "name": "4 star", "count": 20000000 },
+      { "name": "5 star", "count": 130000000 }
+    ]
+  },
+  {
+    "id": 18,
+    "image": "https://i.ibb.co.com/fYvsRH3K/7ynv-VIRdh-JNAng-Cg-GI7i8-Tt-H8-Bqk-JYmffe-UHs-G-m-JOdzt1-XLv-Gmbs-Kuc5-Q1-SIn-Bj-DKN.jpg",
+    "title": "Spotify",
+    "companyName": "Spotify AB",
+    "description": "Listen to millions of songs and podcasts for free.",
+    "size": 110,
+    "reviews": 105000000,
+    "ratingAvg": 4.5,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 5000000 },
+      { "name": "2 star", "count": 2000000 },
+      { "name": "3 star", "count": 8000000 },
+      { "name": "4 star", "count": 25000000 },
+      { "name": "5 star", "count": 65000000 }
+    ]
+  },
+  {
+    "id": 19,
+    "image": "https://i.ibb.co.com/5gR2ynwb/Jf-QNUnohpuq5-IP65-WN9-C109-Vj-Lj-DEj2t-ZYl-Pt-Com-Lzn-Qf-Geeoesub-Oa-HGBcp-Zd-XKu-HU.png",
+    "title": "Messenger",
+    "companyName": "Meta Platforms, Inc.",
+    "description": "Chat and make video calls with friends and family instantly.",
+    "size": 160,
+    "reviews": 95000000,
+    "ratingAvg": 4.3,
+    "downloads": 5000000000,
+    "ratings": [
+      { "name": "1 star", "count": 5000000 },
+      { "name": "2 star", "count": 3000000 },
+      { "name": "3 star", "count": 10000000 },
+      { "name": "4 star", "count": 22000000 },
+      { "name": "5 star", "count": 55000000 }
+    ]
+  },
+  {
+    "id": 20,
+    "image": "https://i.ibb.co.com/zWV0mtXZ/download.png",
+    "title": "Gmail",
+    "companyName": "Google LLC",
+    "description": "Secure and reliable email service from Google.",
+    "size": 130,
+    "reviews": 120000000,
+    "ratingAvg": 4.5,
+    "downloads": 10000000000,
+    "ratings": [
+      { "name": "1 star", "count": 4000000 },
+      { "name": "2 star", "count": 2000000 },
+      { "name": "3 star", "count": 7000000 },
+      { "name": "4 star", "count": 23000000 },
+      { "name": "5 star", "count": 83000000 }
     ]
   }
 ]
