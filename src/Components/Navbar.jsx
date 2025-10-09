@@ -1,12 +1,9 @@
-import React, { useState } from "react";
 import { NavLink } from "react-router";
+import { useNavToggle } from "../context/NavContext";
+
 
 const Navbar = () => {
-  const [toggle, setToggle] = useState("Home");
-
-  const handleToggle = (id) => {
-    setToggle(id);
-  };
+  const { toggle, setToggle } = useNavToggle();
 
   // Active & inactive styles
   const activeStyle = `
@@ -58,7 +55,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 to={"/"}
-                onClick={() => handleToggle("Home")}
+                onClick={() => setToggle("Home")}
                 className={toggle === "Home" ? activeStyle : inactiveStyle}
               >
                 Home
@@ -67,7 +64,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 to={"/apps"}
-                onClick={() => handleToggle("Apps")}
+                onClick={() => setToggle("Apps")}
                 className={toggle === "Apps" ? activeStyle : inactiveStyle}
               >
                 Apps
@@ -76,7 +73,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 to={"/installs"}
-                onClick={() => handleToggle("Installs")}
+                onClick={() => setToggle("Installs")}
                 className={toggle === "Installs" ? activeStyle : inactiveStyle}
               >
                 Installation
@@ -86,7 +83,7 @@ const Navbar = () => {
         </div>
 
         {/* Logo */}
-        <NavLink to={"/"} onClick={() => handleToggle("Home")}>
+        <NavLink to={"/"} onClick={() => setToggle("Home")}>
           <div className="flex justify-center items-center gap-1">
             <img className="w-10" src="/logo.png" alt="Logo" />
             <span className="text-xl md:text-3xl font-bold bg-gradient-to-bl from-[#9F62F2] to-[#632EE3] bg-clip-text text-transparent">
@@ -102,7 +99,7 @@ const Navbar = () => {
           <li>
             <NavLink
               to={"/"}
-              onClick={() => handleToggle("Home")}
+              onClick={() => setToggle("Home")}
               className={toggle === "Home" ? activeStyle : inactiveStyle}
             >
               Home
@@ -111,7 +108,7 @@ const Navbar = () => {
           <li>
             <NavLink
               to={"/apps"}
-              onClick={() => handleToggle("Apps")}
+              onClick={() => setToggle("Apps")}
               className={toggle === "Apps" ? activeStyle : inactiveStyle}
             >
               Apps
@@ -120,7 +117,7 @@ const Navbar = () => {
           <li>
             <NavLink
               to={"/installs"}
-              onClick={() => handleToggle("Installs")}
+              onClick={() => setToggle("Installs")}
               className={toggle === "Installs" ? activeStyle : inactiveStyle}
             >
               Installation

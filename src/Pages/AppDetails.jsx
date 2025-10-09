@@ -30,7 +30,7 @@ const AppDetails = () => {
     if (!installedApps.includes(id)) {
       installedApps.push(id);
       localStorage.setItem("install", JSON.stringify(installedApps));
-      toast.success(`${title} Installed`)
+      toast.success(`${title} Installed`);
       setInstalled(true);
     }
   };
@@ -62,11 +62,20 @@ const AppDetails = () => {
 
   // Format number
   const formatNumber = (num) => {
-    if (num >= 1000000) return (num / 1000000).toFixed(1) + "M";
-    if (num >= 1000) return (num / 1000).toFixed(1) + "K";
+    if (num >= 1_000_000_000) return (num / 1_000_000_000).toFixed(0) + "B";
+    if (num >= 1_000_000) return (num / 1_000_000).toFixed(0) + "M";
+    if (num >= 1_000) return (num / 1_000).toFixed(0) + "K";
     return num;
   };
-
+  // Format Size
+  const formatDataSize = (mb) => {
+    if (mb >= 1024) {
+      // Convert MB to GB
+      return (mb / 1024).toFixed(1).replace(/\.0$/, "") + " GB";
+    }
+    // Keep MB as it is
+    return mb.toFixed(1).replace(/\.0$/, "") + " MB";
+  };
   //  app.ratings data from JSON
   const ratingData = [...ratings]
     .map((r) => ({
@@ -77,8 +86,8 @@ const AppDetails = () => {
 
   return (
     <div className="max-w-11/12 mx-auto py-10 px-4">
-      <div className=" max-w-5xl mx-auto flex flex-col md:flex-row gap-8 py-4">
-        <figure className="w-50 h-60 flex-shrink-0">
+      <div className=" max-w-5xl mx-auto flex flex-col md:flex-row gap-8  justify-center items-center">
+        <figure className="w-50 h-60 ">
           <img
             src={image}
             alt={title}
@@ -94,35 +103,35 @@ const AppDetails = () => {
 
           <hr className="border-gray-300" />
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-4">
-            <div className="text-center">
+          <div className="grid grid-cols-3  mt-4 ">
+            <div className="flex flex-col items-start justify-start">
               <img
                 src="/icon-downloads.png"
                 alt="Downloads"
-                className="w-10 mx-auto mb-2"
+                className="w-5 md:w-10  mb-2"
               />
-              <h3 className="font-semibold">Downloads</h3>
-              <p>{formatNumber(downloads)}</p>
+              <h3>Downloads</h3>
+              <p className="font-semibold md:font-bold">{formatNumber(downloads)}</p>
             </div>
 
-            <div className="text-center">
+            <div className="flex flex-col items-start justify-start">
               <img
                 src="/icon-ratings.png"
                 alt="Ratings"
-                className="w-10 mx-auto mb-2"
+                className="md:w-10 w-5   mb-2"
               />
-              <h3 className="font-semibold">Average Rating</h3>
-              <p>{ratingAvg}</p>
+              <h3>Average Rating</h3>
+              <p className="font-semibold md:font-bold">{ratingAvg}</p>
             </div>
 
-            <div className="text-center">
+            <div className="flex flex-col items-start justify-start">
               <img
                 src="/icon-review.png"
                 alt="Reviews"
-                className="w-10 mx-auto mb-2"
+                className="md:w-10 w-5  mb-2"
               />
-              <h3 className="font-semibold">Total Reviews</h3>
-              <p>{formatNumber(reviews)}</p>
+              <h3>Total Reviews</h3>
+              <p className="font-semibold md:font-bold">{formatNumber(reviews)}</p>
             </div>
           </div>
 
@@ -130,10 +139,12 @@ const AppDetails = () => {
             onClick={handleInstall}
             disabled={installed}
             className={`${
-              installed ? "bg-gray-400 cursor-not-allowed" : "bg-[#00D390] cursor-pointer"
-            } text-white  py-2 px-4 rounded-lg hover:ease-out transition`}
+              installed
+                ? "bg-gray-400 cursor-not-allowed"
+                : "bg-[#00D390] cursor-pointer"
+            } text-white  py-2 px-4 rounded-lg w-full md:w-30 hover:ease-out transition`}
           >
-            {installed ? "Installed" : `Install Now (${size}MB)`}
+            {installed ? "Installed" : `Install Now (${formatDataSize(size)})`}
           </button>
         </div>
       </div>

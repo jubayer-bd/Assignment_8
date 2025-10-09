@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import useApps from "../Hooks/useApps";
-import ProductCard from "../Components/ProductCard";
+
 import { useNavigation } from "react-router-dom";
+import ProductCard from "../components/ProductCard";
 
 const Apps = () => {
   const { data, loading, error } = useApps();
@@ -13,7 +14,7 @@ const Apps = () => {
 
   const isNavigating = navigation.state === "loading";
 
-  // Handle initial page load
+  // Handle page load
   useEffect(() => {
     if (loading) {
       setPageLoading(true);
@@ -26,26 +27,33 @@ const Apps = () => {
     }
   }, [loading, data]);
 
-  // Handle searching
+  // Handle searching 
   useEffect(() => {
     if (!data) return;
 
-    setSearchLoading(true);
+    const normalizedSearch = search.trim().toLowerCase();
+
+    // Show search loader only if user typed something
+    if (normalizedSearch) {
+      setSearchLoading(true);
+    } else {
+      setSearchLoading(false);
+      setFilteredApps(data);
+      return;
+    }
 
     const timer = setTimeout(() => {
-      const result = data.filter(
-        (app) =>
-          app.title.toLowerCase().includes(search.toLowerCase()) ||
-          app.companyName.toLowerCase().includes(search.toLowerCase())
+      const result = data.filter((app) =>
+        app.title.toLowerCase().includes(normalizedSearch)
       );
       setFilteredApps(result);
       setSearchLoading(false);
-    }, 400);
+    }, 400); // debounce for smooth effect
 
     return () => clearTimeout(timer);
   }, [search, data]);
 
-  // 🔵 Full page loader (on reload or navigation)
+  //  Full page loader 
   if (pageLoading || isNavigating) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-white">
@@ -57,7 +65,7 @@ const Apps = () => {
     );
   }
 
-  // 🔴 Error
+  // Error
   if (error) {
     return (
       <p className="text-center text-red-500 py-10 text-lg">
@@ -90,18 +98,25 @@ const Apps = () => {
         />
       </div>
 
-      {/* 🟡 Search loading */}
+      {/*  Search loading */}
       {searchLoading && (
         <p className="text-center text-gray-500 py-10 text-lg animate-pulse">
-          <span className="loading loading-spinner loading-lg"></span> Searching...
+          <span className="loading loading-spinner loading-lg"></span>{" "}
+          Searching...
         </p>
       )}
 
       {/* No Results */}
       {!searchLoading && filteredApps?.length === 0 && (
-        <p className="text-center text-gray-500 py-10 text-lg">
-          No apps found matching “{search}”.
-        </p>
+        <div className="py-15 flex flex-col justify-center items-center space-y-4 ">
+          <figure className="w-60">
+            <img src="/App-Error.png" alt="" />
+          </figure>
+          <p className="text-center font-bold text-3xl">
+            OPPS!! “{search.trim()}” NOT FOUND .
+          </p>{" "}
+          <p className="text-sm text-[#627382]">The App you are requesting is not found on our system.  please try another apps</p>
+        </div>
       )}
 
       {/* Grid */}

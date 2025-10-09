@@ -7,9 +7,9 @@ const InstalledApps = () => {
   const { data = [], loading, error } = useApps();
   const [installedApps, setInstalledApps] = useState([]);
   const [order, setOrder] = useState("none");
-  const [pageLoading, setPageLoading] = useState(true); 
+  const [pageLoading, setPageLoading] = useState(true);
 
-  // load 
+  // load
   useEffect(() => {
     const timer = setTimeout(() => setPageLoading(false), 400);
     return () => clearTimeout(timer);
@@ -43,8 +43,10 @@ const InstalledApps = () => {
     );
 
     const sorted = [...filtered];
-    if (order === "price-desc") sorted.sort((a, b) => b.downloads - a.downloads);
-    else if (order === "price-asc") sorted.sort((a, b) => a.downloads - b.downloads);
+    if (order === "price-desc")
+      sorted.sort((a, b) => b.downloads - a.downloads);
+    else if (order === "price-asc")
+      sorted.sort((a, b) => a.downloads - b.downloads);
 
     return sorted;
   }, [data, installedApps, order]);
@@ -104,23 +106,23 @@ const InstalledApps = () => {
                 key={app.id}
                 className="flex justify-between p-2 bg-white shadow-md rounded-lg items-center"
               >
-                <div className="flex gap-5">
-                  <figure className="w-15 flex justify-center items-center">
+                <div className="flex gap-2 md;gap-5">
+                  <figure className="w-10 md:15  flex justify-center items-center">
                     <img src={app.image} alt={app.title} />
                   </figure>
-                  <div className="flex flex-col justify-center gap-2">
+                  <div className="flex flex-col justify-center gap-1 md:gap-2">
                     <h1 className="font-bold text-md">{app.title}</h1>
                     <div className="flex justify-between gap-2">
-                      <div className="flex gap-2 items-center justify-center">
-                        <img className="w-5" src="/public/icon-downloads.png" />
-                        <p>{formatNumber(app.downloads)}</p>
+                      <div className="flex  gap-1 md:gap-2 items-center justify-center">
+                        <img className="w-3 md:w-3" src="/icon-downloads.png" />
+                        <p className="text-sm">{formatNumber(app.downloads)}</p>
                       </div>
-                      <div className="flex gap-2 items-center justify-center">
-                        <img className="w-5" src="/public/icon-ratings.png" />
-                        <p>{app.ratingAvg}</p>
+                      <div className="flex  gap-1 md:gap-2 items-center justify-center">
+                        <img className="w-3 md:w-5" src="/icon-ratings.png" />
+                        <p className="text-sm">{app.ratingAvg}</p>
                       </div>
-                      <div className="flex gap-2 items-center justify-center">
-                        <span>{app.size}MB</span>
+                      <div className="flex  gap-1 md:gap-2 items-center justify-center">
+                        <span className="text-sm">{app.size}MB</span>
                       </div>
                     </div>
                   </div>
