@@ -87,10 +87,10 @@ const Navbar = () => {
 
         {/* Logo */}
         <NavLink to={"/"} onClick={() => handleToggle("Home")}>
-          <div className="flex justify-center items-center gap-2">
+          <div className="flex justify-center items-center gap-1">
             <img className="w-10" src="/logo.png" alt="Logo" />
-            <span className="text-3xl font-bold bg-gradient-to-bl from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent">
-              Eagle
+            <span className="text-xl md:text-3xl font-bold bg-gradient-to-bl from-[#9F62F2] to-[#632EE3] bg-clip-text text-transparent">
+              HERO.IO
             </span>
           </div>
         </NavLink>
@@ -135,7 +135,7 @@ const Navbar = () => {
           href="https://github.com/jubayer-bd"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-6 py-2 text-white font-semibold rounded-lg bg-gradient-to-bl from-[#632EE3] to-[#9F62F2] hover:opacity-90 transition"
+          className="inline-flex items-center gap-2 px-6 py-2 text-white font-semibold rounded-lg bg-gradient-to-bl from-[#9F62F2] to-[#632EE3] hover:opacity-90 transition"
         >
           <i className="fa-brands fa-github text-lg"></i>
           Contribute

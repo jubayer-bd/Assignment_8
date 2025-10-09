@@ -130,8 +130,8 @@ const AppDetails = () => {
             onClick={handleInstall}
             disabled={installed}
             className={`${
-              installed ? "bg-gray-400 cursor-not-allowed" : "bg-[#00D390]"
-            } text-white py-2 px-4 rounded-lg hover:ease-out transition`}
+              installed ? "bg-gray-400 cursor-not-allowed" : "bg-[#00D390] cursor-pointer"
+            } text-white  py-2 px-4 rounded-lg hover:ease-out transition`}
           >
             {installed ? "Installed" : `Install Now (${size}MB)`}
           </button>

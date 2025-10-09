@@ -1,13 +1,19 @@
 import React, { useEffect, useState, useMemo } from "react";
 import useApps from "../Hooks/useApps";
-
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const InstalledApps = () => {
-  const { data = [], loading, error } = useApps(); // ensure data is always an array
+  const { data = [], loading, error } = useApps();
   const [installedApps, setInstalledApps] = useState([]);
   const [order, setOrder] = useState("none");
+  const [pageLoading, setPageLoading] = useState(true); 
+
+  // load 
+  useEffect(() => {
+    const timer = setTimeout(() => setPageLoading(false), 400);
+    return () => clearTimeout(timer);
+  }, []);
 
   // Load installed apps from localStorage
   useEffect(() => {
@@ -15,7 +21,6 @@ const InstalledApps = () => {
     setInstalledApps(installed.map(String));
   }, []);
 
-  // Format numbers like 50M, 50K
   const formatNumber = (num) => {
     if (num >= 1000000000) return (num / 1000000000).toFixed(1) + "B";
     if (num >= 1000000) return (num / 1000000).toFixed(1) + "M";
@@ -33,117 +38,114 @@ const InstalledApps = () => {
   };
 
   const installedAppData = useMemo(() => {
-    // filter installed apps
     const filtered = data.filter((app) =>
       installedApps.includes(String(app.id))
     );
 
-    // sort without mutating original
     const sorted = [...filtered];
-    if (order === "price-desc") {
-      sorted.sort((a, b) => b.downloads - a.downloads);
-    } else if (order === "price-asc") {
-      sorted.sort((a, b) => a.downloads - b.downloads);
-    }
+    if (order === "price-desc") sorted.sort((a, b) => b.downloads - a.downloads);
+    else if (order === "price-asc") sorted.sort((a, b) => a.downloads - b.downloads);
 
     return sorted;
   }, [data, installedApps, order]);
 
-  if (loading) return <p className="text-center py-10">Loading...</p>;
+  // ✅ PAGE LOADER
+  if (pageLoading || loading) {
+    return (
+      <div className="flex flex-col justify-center items-center py-20 text-gray-700 text-lg">
+        <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-[#00D390] mb-3"></div>
+        <p>Loading Installed Apps...</p>
+      </div>
+    );
+  }
+
   if (error)
     return (
       <p className="text-center py-10 text-red-500">Something went wrong!</p>
     );
 
   return (
-    <div className="max-w-11/12 mx-auto py-10 px-4">
-      <div>
-        <h1 className="text-3xl text-center font-bold mb-2">
-          Your Installed Apps
-        </h1>
-        <p className="text-[#627382] text-center text-sm mb-4">
-          Explore All Trending Apps on the Market developed by us
-        </p>
-      </div>
-
-      <div className="flex items-center justify-between mb-6">
-        <h2 className="text-gray-700 font-semibold">
-          {installedAppData.length} Apps Found
-        </h2>
-        <label className="form-control w-full max-w-xs">
-          <select
-            className="select select-bordered"
-            value={order}
-            onChange={(e) => setOrder(e.target.value)}
-          >
-            <option value="none">Sort By Downloads</option>
-            <option value="price-desc">High to Low</option>
-            <option value="price-asc">Low to High</option>
-          </select>
-        </label>
-      </div>
-
-      {installedAppData.length === 0 ? (
-        <p className="text-center py-10 text-gray-600">
-          No apps installed yet.
-        </p>
-      ) : (
-        <div className="flex flex-col items-center py-10 gap-6">
-          {installedAppData.map((app) => (
-            <div
-              key={app.id}
-              className="border flex-row gap-8 rounded-lg p-2 justify-start shadow-md flex items-center w-full"
-            >
-              <img
-                src={app.image}
-                alt={app.title}
-                className="w-20 h-20 object-cover rounded-lg mb-4"
-              />
-              <div className="flex   justify-between  ">
-                <div className="">
-                  <h2 className="text-xl font-semibold">{app.title}</h2>
-                  <p className="text-gray-600 mb-2">{app.companyName}</p>
-                  <div className="flex gap-4 mb-2">
-                    <p>⭐ {app.ratingAvg}</p>
-                    <p className="flex items-center">
-                      <img
-                        className="w-5 mr-1"
-                        src="/public/icon-downloads.png"
-                        alt="Downloads"
-                      />
-                      {formatNumber(app.downloads)}
-                    </p>
-                    <p>
-                      {app.size} <span>MB</span>
-                    </p>
-                  </div>
-                  <div></div>
-                </div>
-                <div className="flex  items-center justify-between  ">
-                  <button
-                    onClick={() => handleUninstall(app.id)}
-                    className="bg-[#00D390] text-white  mt-5 px-3 rounded hover:bg-red-600"
-                  >
-                    Uninstall
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
+    <div className="bg-gray-100">
+      <div className="max-w-11/12 mx-auto py-10 px-4">
+        <div>
+          <h1 className="text-3xl text-center font-bold mb-2">
+            Your Installed Apps
+          </h1>
+          <p className="text-[#627382] text-center text-sm mb-4">
+            Explore All Trending Apps on the Market developed by us
+          </p>
         </div>
-      )}
 
-      {/* React Toastify Container */}
-      <ToastContainer
-        position="top-right"
-        autoClose={3000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        pauseOnHover
-        draggable
-        theme="colored"
-      />
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-gray-700 font-semibold">
+            {installedAppData.length} Apps Found
+          </h2>
+          <label className="form-control w-full max-w-xs">
+            <select
+              className="select select-bordered"
+              value={order}
+              onChange={(e) => setOrder(e.target.value)}
+            >
+              <option value="none">Sort By Downloads</option>
+              <option value="price-desc">High to Low</option>
+              <option value="price-asc">Low to High</option>
+            </select>
+          </label>
+        </div>
+
+        {installedAppData.length === 0 ? (
+          <p className="text-center py-10 text-gray-600">
+            No apps installed yet.
+          </p>
+        ) : (
+          <div className="flex flex-col gap-6">
+            {installedAppData.map((app) => (
+              <div
+                key={app.id}
+                className="flex justify-between p-2 bg-white shadow-md rounded-lg items-center"
+              >
+                <div className="flex gap-5">
+                  <figure className="w-15 flex justify-center items-center">
+                    <img src={app.image} alt={app.title} />
+                  </figure>
+                  <div className="flex flex-col justify-center gap-2">
+                    <h1 className="font-bold text-md">{app.title}</h1>
+                    <div className="flex justify-between gap-2">
+                      <div className="flex gap-2 items-center justify-center">
+                        <img className="w-5" src="/public/icon-downloads.png" />
+                        <p>{formatNumber(app.downloads)}</p>
+                      </div>
+                      <div className="flex gap-2 items-center justify-center">
+                        <img className="w-5" src="/public/icon-ratings.png" />
+                        <p>{app.ratingAvg}</p>
+                      </div>
+                      <div className="flex gap-2 items-center justify-center">
+                        <span>{app.size}MB</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  onClick={() => handleUninstall(app.id)}
+                  className="bg-[#00D390] text-white p-2 cursor-pointer rounded hover:bg-red-600 transition ease-in-out"
+                >
+                  Uninstall
+                </button>
+              </div>
+            ))}
+          </div>
+        )}
+
+        <ToastContainer
+          position="top-right"
+          autoClose={3000}
+          hideProgressBar={false}
+          pauseOnHover
+          draggable
+          theme="colored"
+        />
+      </div>
     </div>
   );
 };
