@@ -98,7 +98,12 @@ const AppDetails = () => {
         <div className="flex-1 space-y-4">
           <div>
             <h1 className="text-3xl font-bold">{title}</h1>
-            <h2 className="text-gray-600">Developed by {companyName}</h2>
+            <h2 className="text-gray-600">
+              Developed by{" "}
+              <span className="bg-gradient-to-bl from-[#9F62F2] to-[#632EE3] bg-clip-text text-transparent">
+                {companyName}
+              </span>
+            </h2>
           </div>
 
           <hr className="border-gray-300" />
@@ -111,7 +116,9 @@ const AppDetails = () => {
                 className="w-5 md:w-10  mb-2"
               />
               <h3>Downloads</h3>
-              <p className="font-semibold md:font-bold">{formatNumber(downloads)}</p>
+              <p className="font-semibold md:font-bold">
+                {formatNumber(downloads)}
+              </p>
             </div>
 
             <div className="flex flex-col items-start justify-start">
@@ -131,7 +138,9 @@ const AppDetails = () => {
                 className="md:w-10 w-5  mb-2"
               />
               <h3>Total Reviews</h3>
-              <p className="font-semibold md:font-bold">{formatNumber(reviews)}</p>
+              <p className="font-semibold md:font-bold">
+                {formatNumber(reviews)}
+              </p>
             </div>
           </div>
 
