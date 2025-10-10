@@ -1,5 +1,5 @@
 # 🚀 HERO.IO – App Explorer Platform
-# 🔗 LIVE Link – https://apps-store-bd.netlify.app/
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![React](https://img.shields.io/badge/React-18.2.0-blue.svg)](https://reactjs.org/)
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-v3.3.2-blue.svg)](https://tailwindcss.com/)
