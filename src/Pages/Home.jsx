@@ -5,13 +5,14 @@ import Banner from "../Components/Banner";
 import { useNavigation } from "react-router-dom";
 import { Link, NavLink } from "react-router";
 import ProductCard from "../components/ProductCard";
+import { useNavToggle } from "../context/NavContext";
 
 const Home = () => {
   const { data, loading, error } = useApps();
   const [homeApps, setHomeApps] = useState([]);
   const [localLoading, setLocalLoading] = useState(true);
   const navigation = useNavigation();
-
+  const {  setToggle } = useNavToggle();
   //  loading when fetching data
   useEffect(() => {
     if (loading) {
@@ -69,7 +70,11 @@ const Home = () => {
         </div>
       </section>
       <div className="flex justify-center items-center py-5">
-        <NavLink to={'/apps'} className="inline-flex items-center gap-2 px-6 py-2 text-white font-semibold rounded bg-gradient-to-bl from-[#9F62F2] to-[#632EE3] hover:opacity-90 transition">
+        <NavLink
+          to={"/apps"}
+          onClick={() => setToggle("Apps")}
+          className="inline-flex items-center gap-2 px-6 py-2 text-white font-semibold rounded bg-gradient-to-bl from-[#9F62F2] to-[#632EE3] hover:opacity-90 transition"
+        >
           Show All
         </NavLink>
       </div>

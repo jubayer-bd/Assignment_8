@@ -9,7 +9,7 @@ const InstalledApps = () => {
   const [order, setOrder] = useState("none");
   const [pageLoading, setPageLoading] = useState(true);
 
-  // load
+  // Page loader 
   useEffect(() => {
     const timer = setTimeout(() => setPageLoading(false), 400);
     return () => clearTimeout(timer);
@@ -21,6 +21,7 @@ const InstalledApps = () => {
     setInstalledApps(installed.map(String));
   }, []);
 
+  // Format number 
   const formatNumber = (num) => {
     if (num >= 1000000000) return (num / 1000000000).toFixed(1) + "B";
     if (num >= 1000000) return (num / 1000000).toFixed(1) + "M";
@@ -28,30 +29,34 @@ const InstalledApps = () => {
     return num;
   };
 
+  // Handle uninstall
   const handleUninstall = (id) => {
+    const app = data.find((a) => String(a.id) === String(id));
     const updatedInstalled = installedApps.filter(
       (appId) => appId !== String(id)
     );
+
     localStorage.setItem("install", JSON.stringify(updatedInstalled));
     setInstalledApps(updatedInstalled);
-    toast.success("App uninstalled successfully!");
+
+    toast.success(`${app?.title || "App"} uninstalled successfully!`);
   };
 
+  // Filter and sort installed apps
   const installedAppData = useMemo(() => {
     const filtered = data.filter((app) =>
       installedApps.includes(String(app.id))
     );
 
     const sorted = [...filtered];
-    if (order === "price-desc")
-      sorted.sort((a, b) => b.downloads - a.downloads);
+    if (order === "price-desc") sorted.sort((a, b) => b.downloads - a.downloads);
     else if (order === "price-asc")
       sorted.sort((a, b) => a.downloads - b.downloads);
 
     return sorted;
   }, [data, installedApps, order]);
 
-  // ✅ PAGE LOADER
+  // Page loader
   if (pageLoading || loading) {
     return (
       <div className="flex flex-col justify-center items-center py-20 text-gray-700 text-lg">
@@ -61,13 +66,14 @@ const InstalledApps = () => {
     );
   }
 
+  // Error handling
   if (error)
     return (
       <p className="text-center py-10 text-red-500">Something went wrong!</p>
     );
 
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-100 min-h-screen">
       <div className="max-w-11/12 mx-auto py-10 px-4">
         <div>
           <h1 className="text-3xl text-center font-bold mb-2">
@@ -106,22 +112,30 @@ const InstalledApps = () => {
                 key={app.id}
                 className="flex justify-between p-2 bg-white shadow-md rounded-lg items-center"
               >
-                <div className="flex gap-2 md;gap-5">
-                  <figure className="w-10 md:15  flex justify-center items-center">
+                <div className="flex gap-2 md:gap-5">
+                  <figure className="w-10 md:w-15 flex justify-center items-center">
                     <img src={app.image} alt={app.title} />
                   </figure>
                   <div className="flex flex-col justify-center gap-1 md:gap-2">
                     <h1 className="font-bold text-md">{app.title}</h1>
                     <div className="flex justify-between gap-2">
-                      <div className="flex  gap-1 md:gap-2 items-center justify-center">
-                        <img className="w-3 md:w-3" src="/icon-downloads.png" />
+                      <div className="flex gap-1 md:gap-2 items-center justify-center">
+                        <img
+                          className="w-3 md:w-3"
+                          src="/icon-downloads.png"
+                          alt="downloads"
+                        />
                         <p className="text-sm">{formatNumber(app.downloads)}</p>
                       </div>
-                      <div className="flex  gap-1 md:gap-2 items-center justify-center">
-                        <img className="w-3 md:w-5" src="/icon-ratings.png" />
+                      <div className="flex gap-1 md:gap-2 items-center justify-center">
+                        <img
+                          className="w-3 md:w-5"
+                          src="/icon-ratings.png"
+                          alt="rating"
+                        />
                         <p className="text-sm">{app.ratingAvg}</p>
                       </div>
-                      <div className="flex  gap-1 md:gap-2 items-center justify-center">
+                      <div className="flex gap-1 md:gap-2 items-center justify-center">
                         <span className="text-sm">{app.size}MB</span>
                       </div>
                     </div>
