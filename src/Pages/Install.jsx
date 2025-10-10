@@ -9,7 +9,7 @@ const InstalledApps = () => {
   const [order, setOrder] = useState("none");
   const [pageLoading, setPageLoading] = useState(true);
 
-  // Page loader 
+  // Page loader
   useEffect(() => {
     const timer = setTimeout(() => setPageLoading(false), 400);
     return () => clearTimeout(timer);
@@ -21,12 +21,21 @@ const InstalledApps = () => {
     setInstalledApps(installed.map(String));
   }, []);
 
-  // Format number 
+  // Format number
   const formatNumber = (num) => {
     if (num >= 1000000000) return (num / 1000000000).toFixed(1) + "B";
     if (num >= 1000000) return (num / 1000000).toFixed(1) + "M";
     if (num >= 1000) return (num / 1000).toFixed(1) + "K";
     return num;
+  };
+  // Format size
+  const formatDataSize = (mb) => {
+    if (mb >= 1024) {
+      // Convert MB to GB
+      return (mb / 1024).toFixed(1).replace(/\.0$/, "") + " GB";
+    }
+    // Keep MB as it is
+    return mb.toFixed(1).replace(/\.0$/, "") + " MB";
   };
 
   // Handle uninstall
@@ -49,7 +58,8 @@ const InstalledApps = () => {
     );
 
     const sorted = [...filtered];
-    if (order === "price-desc") sorted.sort((a, b) => b.downloads - a.downloads);
+    if (order === "price-desc")
+      sorted.sort((a, b) => b.downloads - a.downloads);
     else if (order === "price-asc")
       sorted.sort((a, b) => a.downloads - b.downloads);
 
@@ -136,7 +146,9 @@ const InstalledApps = () => {
                         <p className="text-sm">{app.ratingAvg}</p>
                       </div>
                       <div className="flex gap-1 md:gap-2 items-center justify-center">
-                        <span className="text-sm">{app.size}MB</span>
+                        <span className="text-sm">
+                          {formatDataSize(app.size)}
+                        </span>
                       </div>
                     </div>
                   </div>
